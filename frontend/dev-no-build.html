@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant MS - Development</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        
+        // Simple Dashboard Component
+        const Dashboard = () => {
+            return React.createElement('div', {
+                className: 'bg-gray-900 min-h-screen text-white p-8'
+            }, [
+                React.createElement('h1', {
+                    key: 'title',
+                    className: 'text-3xl font-bold mb-8'
+                }, 'Restaurant Management System'),
+                React.createElement('div', {
+                    key: 'content',
+                    className: 'grid grid-cols-1 md:grid-cols-3 gap-6'
+                }, [
+                    React.createElement('div', {
+                        key: 'card1',
+                        className: 'bg-gray-800 p-6 rounded-lg'
+                    }, [
+                        React.createElement('h2', {
+                            key: 'title1',
+                            className: 'text-xl font-semibold mb-4'
+                        }, 'Add Table'),
+                        React.createElement('button', {
+                            key: 'btn1',
+                            className: 'bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded'
+                        }, 'Add New Table')
+                    ]),
+                    React.createElement('div', {
+                        key: 'card2',
+                        className: 'bg-gray-800 p-6 rounded-lg'
+                    }, [
+                        React.createElement('h2', {
+                            key: 'title2',
+                            className: 'text-xl font-semibold mb-4'
+                        }, 'Add Category'),
+                        React.createElement('button', {
+                            key: 'btn2',
+                            className: 'bg-green-600 hover:bg-green-700 px-4 py-2 rounded'
+                        }, 'Add Category')
+                    ]),
+                    React.createElement('div', {
+                        key: 'card3',
+                        className: 'bg-gray-800 p-6 rounded-lg'
+                    }, [
+                        React.createElement('h2', {
+                            key: 'title3',
+                            className: 'text-xl font-semibold mb-4'
+                        }, 'Add Dishes'),
+                        React.createElement('button', {
+                            key: 'btn3',
+                            className: 'bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded'
+                        }, 'Add Dish')
+                    ])
+                ])
+            ]);
+        };
+        
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(Dashboard));
+    </script>
+</body>
+</html>

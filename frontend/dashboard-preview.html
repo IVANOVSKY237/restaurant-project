@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 min-h-screen">
+    <!-- Single Top Navigation Bar -->
+    <div class="bg-gray-800 px-6 py-3 border-b border-gray-700">
+        <div class="flex items-center justify-between">
+            <!-- Left side - Logo -->
+            <div class="flex items-center gap-2">
+                <span class="text-white text-lg">✕</span>
+                <span class="text-white text-lg font-medium">Restro</span>
+            </div>
+
+            <!-- Center - Search -->
+            <div class="flex-1 max-w-md mx-8">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        class="w-full bg-transparent text-gray-300 pl-10 pr-4 py-2 text-sm placeholder-gray-500 focus:outline-none"
+                    />
+                </div>
+            </div>
+
+            <!-- Right side - User actions -->
+            <div class="flex items-center gap-4">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-th text-lg"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-bell text-lg"></i>
+                </button>
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-gray-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-xs text-white"></i>
+                    </div>
+                    <div class="text-sm">
+                        <div class="text-white font-medium">Amrit Raj</div>
+                        <div class="text-gray-400 text-xs">Admin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button Row -->
+    <div class="px-6 py-6">
+        <div class="flex items-center justify-between">
+            <!-- Left side - Add buttons -->
+            <div class="flex items-center gap-6">
+                <button class="bg-transparent hover:bg-gray-700 px-3 py-2 text-white text-sm flex items-center gap-2 transition-colors duration-200">
+                    <i class="fas fa-table text-sm"></i>
+                    <span>Add Table</span>
+                    <span class="ml-1 text-xs">▼</span>
+                </button>
+                <button class="bg-transparent hover:bg-gray-700 px-3 py-2 text-white text-sm flex items-center gap-2 transition-colors duration-200">
+                    <i class="fas fa-tags text-sm"></i>
+                    <span>Add Category</span>
+                    <span class="ml-1 text-xs">▼</span>
+                </button>
+                <button class="bg-transparent hover:bg-gray-700 px-3 py-2 text-white text-sm flex items-center gap-2 transition-colors duration-200">
+                    <i class="fas fa-utensils text-sm"></i>
+                    <span>Add Dishes</span>
+                    <span class="ml-1 text-xs">▼</span>
+                </button>
+            </div>
+
+            <!-- Right side - Tab buttons -->
+            <div class="flex items-center gap-6">
+                <button class="bg-transparent hover:bg-gray-700 px-3 py-2 text-sm flex items-center gap-2 transition-colors duration-200 text-white relative">
+                    <i class="fas fa-chart-line text-sm"></i>
+                    <span>Metrics</span>
+                    <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-white"></div>
+                </button>
+                <button class="bg-transparent hover:bg-gray-700 px-3 py-2 text-sm flex items-center gap-2 transition-colors duration-200 text-gray-300">
+                    <i class="fas fa-shopping-cart text-sm"></i>
+                    <span>Orders</span>
+                </button>
+                <button class="bg-transparent hover:bg-gray-700 px-3 py-2 text-sm flex items-center gap-2 transition-colors duration-200 text-gray-300">
+                    <i class="fas fa-credit-card text-sm"></i>
+                    <span>Payment</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="px-6">
+            <div class="text-white">
+                <div class="min-h-96 flex items-center justify-center">
+                    <div class="text-gray-400 text-lg">
+                        Dashboard content will be displayed here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

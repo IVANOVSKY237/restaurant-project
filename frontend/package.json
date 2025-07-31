@@ -1,0 +1,50 @@
+{
+  "name": "restaurant-ms",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 5174",
+    "dev:force": "vite --force --host --port 5174",
+    "dev-safe": "node --max-old-space-size=4096 --no-warnings ./node_modules/vite/bin/vite.js --host --port 5174",
+    "dev-minimal": "vite --config vite.config.minimal.js --host --port 5174",
+    "dev-no-esbuild": "vite --config vite.config.no-esbuild.js --host --port 5174",
+    "dev-webpack": "webpack serve --config webpack.dev.js",
+    "dev-simple": "node simple-server.js",
+    "build": "vite build",
+    "build-safe": "node --max-old-space-size=4096 --no-warnings ./node_modules/vite/bin/vite.js build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules/.vite"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tanstack/react-query": "^5.82.0",
+    "axios": "^1.10.0",
+    "framer-motion": "^12.23.6",
+    "notistack": "^3.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.12.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.28.0",
+    "tailwind-scrollbar-hide": "^4.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.1",
+    "terser": "^5.43.1",
+    "vite": "^4.5.3"
+  }
+}
