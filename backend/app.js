@@ -15,8 +15,8 @@ const PORT = config.port;
 connectDB();
 
 // ✅ Middlewares
-app.use(express.json());
-app.use(cookieParser());
+//app.use(express.json());
+//app.use(cookieParser());
 
 // ✅ CORS Configuration
 const allowedOrigins = [
@@ -39,7 +39,7 @@ const corsOptions = {
 };
 
 // Use CORS
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 
 // ✅ Handle Preflight Requests Explicitly
 app.options('*', cors(corsOptions));
@@ -50,13 +50,13 @@ app.get("/", (req, res) => {
 });
 
 // ✅ API Routes
-app.use("/api/user", require("./routes/userRoutes"));
-app.use("/api/order", require("./routes/orderRoutes"));
+//app.use("/api/user", require("./routes/userRoutes"));
+//app.use("/api/order", require("./routes/orderRoutes"));
 app.use("/api/table", require("./routes/tableRoute"));
 // app.use("/api/payment", require("./routes/payementRoute"));
 
 // ✅ Global Error Handler
-app.use(globalErrorHandler);
+//app.use(globalErrorHandler);
 
 // ✅ Start Server
 app.listen(PORT, () => {
