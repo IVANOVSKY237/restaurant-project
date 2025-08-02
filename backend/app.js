@@ -25,7 +25,7 @@ const allowedOrigins = [
   'https://restaurant-project-gold.vercel.app'
 ];
 
-app.use(cors({
+const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
@@ -36,7 +36,13 @@ app.use(cors({
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
-}));
+};
+
+// Use CORS
+app.use(cors(corsOptions));
+
+// ✅ Handle Preflight Requests Explicitly
+app.options('*', cors(corsOptions));
 
 // ✅ Health Check Endpoint
 app.get("/", (req, res) => {
